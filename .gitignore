@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Fichiers sensibles
+.env
+*.pem
+*.key
+
+# Fichiers de configuration locaux
+config.local.json
+
+# Fichiers sensibles
+.env
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de cache
+.cache/
+*.egg-info/
+
+# Fichiers spécifiques au projet
+*.db
+*.sqlite3

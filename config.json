@@ -1,0 +1,6 @@
+{
+  "max_pages": 10,
+  "chunk_size": 500,
+  "max_concurrent": 5,
+  "search_threshold": 0.4
+}
