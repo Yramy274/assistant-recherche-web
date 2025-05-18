@@ -43,7 +43,10 @@ class VectorStore:
             
             # Initialiser ChromaDB
             print("Initialisation de ChromaDB...")
-            self.chroma_client = chromadb.PersistentClient(path="/app/chroma_db")
+            # Utiliser un chemin relatif pour être compatible avec différents environnements
+            chroma_path = os.path.join(os.getcwd(), "chroma_db")
+            print(f"Chemin ChromaDB: {chroma_path}")
+            self.chroma_client = chromadb.PersistentClient(path=chroma_path)
             print("Client ChromaDB initialisé avec succès")
             
             # Créer un client HTTP personnalisé pour les embeddings
