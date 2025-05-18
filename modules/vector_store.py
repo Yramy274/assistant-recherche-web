@@ -1,5 +1,14 @@
 import os
 import json
+
+# Fix SQLite version issue on Streamlit Cloud
+import sys
+import importlib.util
+
+if importlib.util.find_spec("pysqlite3") is not None:
+    import pysqlite3
+    sys.modules["sqlite3"] = pysqlite3
+
 import chromadb
 from chromadb.config import Settings
 from openai import OpenAI
