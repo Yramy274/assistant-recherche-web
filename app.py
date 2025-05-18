@@ -6,11 +6,19 @@ import time
 from pathlib import Path
 from typing import Optional, Dict, Any
 import asyncio
+import logging
+
+# Configurer le logging
+logging.basicConfig(level=logging.INFO)
 
 # Importer les modules personnalisés
 from modules.scraper import WebScraper
 from modules.vector_store import VectorStore
 from utils.config import load_config, save_config
+from utils.playwright_config import ensure_playwright_browsers
+
+# S'assurer que les navigateurs Playwright sont installés
+ensure_playwright_browsers()
 
 # Charger la configuration
 load_dotenv()
